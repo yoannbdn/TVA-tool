@@ -14,12 +14,12 @@ tarif.addEventListener('input', function() {
     replacer()
 })
 
-food.addEventListener('check', function(){
+food.addEventListener('click', function(){
     foodEntry = foodEntry + 1
     alcoholEntry = alcoholEntry * 0
 })
 
-alcool.addEventListener('check', function(){
+alcool.addEventListener('click', function(){
     foodEntry = foodEntry * 0
     alcoholEntry = alcoholEntry + 1
 })
