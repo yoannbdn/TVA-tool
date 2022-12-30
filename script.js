@@ -10,6 +10,8 @@ let alcoholEntry = 0
 
 tarif.addEventListener('input', function() {
     tarifEntry = this.value
+    calculator()
+    replacer()
 })
 
 food.addEventListener('check', function(){
@@ -33,5 +35,3 @@ function calculator () {
 function replacer () {
     document.getElementById('tarif-display').innerHTML = tarifEntry
 }
-
-replacer()
