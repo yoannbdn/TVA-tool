@@ -27,3 +27,7 @@ function calculator () {
         tarifEntry = tarifEntry * 1,20
     }
 }
+
+function replacer () {
+    document.getElementById('tarif-display').innerHTML = tarifEntry
+}
