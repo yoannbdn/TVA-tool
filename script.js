@@ -33,5 +33,5 @@ function calculator () {
 }
 
 function replacer () {
-    document.getElementById('tarif-display').innerHTML = tarifEntry
+    document.getElementById('tarif-display').innerHTML.replace = tarifEntry
 }
