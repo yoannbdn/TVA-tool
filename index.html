@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title> Y.BDN</title>
+  <title> TVA Tool / Y.BDN</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <input type="text" id="cardNumber" placeholder="Saisir le tarif HT" inputmode="decimal" required>
+  <label for="tarif">Tarif HT</label>
+  <input type="text" id="tarif" placeholder="Saisir le tarif HT" inputmode="decimal" required>
+  <label for="foodTVA">TVA 5,5</label>
   <input type="checkbox" name="alimentaire" id="foodTVA">
+  <label for="alcoholTVA">TVA 20</label>
   <input type="checkbox" name="alcool" id="alcoholTVA">
-  
+  <p>Tarif TTC</p>
   <p id="numbers-display" class="card-number">???</p>
 
+  <script src="./script.js"></script>
   
 </body>
 </html>
