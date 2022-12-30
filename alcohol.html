@@ -14,38 +14,26 @@
 </head>
 <body>
   <section id="convert-module">
-    <h2>Convertisseur HT / TVA</h2>
+    <h2>Convertisseur HT / TVA 20%</h2>
+    <nav>
+      <a href="./index.html"><button> TVA 5,5%</button></a>
+      <a href="./alcohol.html"><button> TVA 20%</button></a>
+    </nav>
     <form action="">
       <h3>Tarif HT</h3>
       <!-- Entrée du tarif -->
       <input type="text" id="tarif" placeholder="Saisir le tarif HT" inputmode="decimal" required>
     </form>
-    <div class="selector">
-      <h4 id="fiveFive"> TVA 5,5%</h4>
-      <h4 id="twenty"> TVA 20%</h4>
-    </div>
-    <div id="result">
+    <div>
       <h3> Tarif TTC</h3>
       <p id="tarif-display"></p>
     </div>
     <script>
       let tarif = document.getElementById('tarif')
       let tarifEntry = 0
-      let tarifDisplay = 0
-      let tarifReset = 0
       tarif.addEventListener('input', function() {
-          tarifEntry = this.value
-          tarifDisplay = tarifEntry
+          tarifEntry = this.value * 1.20
           document.getElementById('tarif-display').innerHTML = tarifEntry
-      })
-
-      document.getElementById('fiveFive').addEventListener('click', function(){
-        tarifDisplay = tarifEntry * 1.055
-        document.getElementById('tarif-display').innerHTML = tarifDisplay
-      })
-      document.getElementById('twenty').addEventListener('click', function(){
-        tarifDisplay = tarifEntry * 1.20
-        document.getElementById('tarif-display').innerHTML = tarifDisplay
       })
       </script>
     </section>

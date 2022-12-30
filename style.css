@@ -1,1 +1,29 @@
-Style
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.selector{
+    display: flex;
+    flex-direction: row;
+}
+.selector h4{
+    border: 1px solid black;
+    margin-left: 10px;
+}
+#result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tarif-display{
+    font-size: 1.5em;
+    color: brown;
+}
