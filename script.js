@@ -4,8 +4,8 @@ let alcool = document.getElementById('alcoholTVA')
 
 
 let tarifEntry = 0
-let foodEntry = false
-let alcoholEntry = false
+let foodEntry = 0
+let alcoholEntry = 0
 
 
 tarif.addEventListener('input', function() {
@@ -13,17 +13,19 @@ tarif.addEventListener('input', function() {
 })
 
 food.addEventListener('check', function(){
-    foodEntry = true
+    foodEntry = foodEntry + 1
+    alcoholEntry = alcoholEntry * 0
 })
 
 alcool.addEventListener('check', function(){
-    alcoholEntry = true
+    foodEntry = foodEntry * 0
+    alcoholEntry = alcoholEntry + 1
 })
 
 function calculator () {
-    if (foodEntry == true) {
+    if (foodEntry == 1) {
         tarifEntry = tarifEntry * 1,055
-    } else if (alcoholEntry == true){
+    } else if (alcoholEntry == 1){
         tarifEntry = tarifEntry * 1,20
     }
 }
@@ -31,3 +33,5 @@ function calculator () {
 function replacer () {
     document.getElementById('tarif-display').innerHTML = tarifEntry
 }
+
+replacer()
