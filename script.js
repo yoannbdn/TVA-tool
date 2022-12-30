@@ -14,14 +14,21 @@ tarif.addEventListener('input', function() {
     replacer()
 })
 
-food.addEventListener('click', function(){
-    foodEntry = foodEntry + 1
-    alcoholEntry = alcoholEntry * 0
+food.addEventListener('change', function(){
+    if (this.checked) {
+        foodEntry = 1;
+      } else {
+        foodEntry = 0;
+      }
 })
 
-alcool.addEventListener('click', function(){
-    foodEntry = foodEntry * 0
-    alcoholEntry = alcoholEntry + 1
+
+alcool.addEventListener('change', function(){
+    if (this.checked) {
+        alcoholEntry = 1;
+      } else {
+        alcoholEntry = 0;
+      }
 })
 
 function calculator () {
